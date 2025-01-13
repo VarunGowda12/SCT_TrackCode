@@ -1,0 +1,46 @@
+def CtoF(c):
+    F = ( c * (9/5) ) + 32
+    return F
+def FtoC(f):
+    C = ( f - 32 ) * (5/9)
+    return C
+def CtoK(c):
+    K = c + 273.15
+    return K
+def KtoC(k):
+    C = k - 273.15
+    return C
+def KtoF(k):
+    F = ( k - 273.15 ) * (9/5) + 32
+    return F
+def FtoK(f):
+    K = (f - 32) * (5/9) + 273.15
+    return K
+
+def temperature_converter():
+    print('Select the option to want to convert temperature between :')
+    print("1.Celsius to Fahrenheit") 
+    print("2.Fahrenheit to Celsius") 
+    print("3.Celsius to Kelvin") 
+    print("4.Kelvin to Celsius") 
+    print("5.Fahrenheit to Kelvin") 
+    print("6.Kelvin to Fahrenheit")
+    n = int(input("enter the option : "))
+    temp = float(input('enter thr temperature : '))
+
+    if n == 1:
+        print(f"Celsius = {temp}\nFahrenheit = {CtoF(temp)}")
+    elif n == 2:    
+        print(f"Fahrenheit = {temp} \nCelsius = {FtoC(temp)}")
+    elif n == 3:    
+        print(f"Celsius = {temp} \nKelvin = {CtoK(temp)}")
+    elif n == 4:   
+        print(f"Kelvin = {temp} \nCelsius = {KtoC(temp)}")
+    elif n == 5:    
+        print(f"Fahrenheit = {temp} \nKelvin = {FtoK(temp)}")
+    elif n == 6:    
+        print(f" Kelvin = {temp} \nFahrenheit = {KtoF(temp)}")
+    else:
+        print("Enter a Valid Option")
+
+temperature_converter()
