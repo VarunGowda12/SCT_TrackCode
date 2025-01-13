@@ -1,0 +1,21 @@
+import random
+
+def Guess_the_Number():
+    random_no = random.randint(1,100)
+    Attempts = 0
+
+    print('I have generated a random number between 1 and 100')
+    print('Can you guess what number it is ?')
+
+    while(True):
+        guess = int(input('enter your guess : '))
+        Attempts += 1
+        if guess > random_no:
+            print('Too high!!,Guess other number')
+        elif guess < random_no:
+            print("Too low!!,Guess other number")
+        else:
+            print(f"Hoory! you just guess the correct number in {Attempts} attempts.")
+            break
+
+Guess_the_Number()
